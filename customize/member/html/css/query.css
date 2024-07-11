@@ -1,0 +1,196 @@
+* {
+    /* 去除浏览器默认内外边距 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 去除input的轮廓 */
+input {
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    /* 溢出隐藏 */
+    overflow-x: hidden;
+    display: flex;
+    /* 渐变方向从左到右 */
+   /* 这个是外层的代码颜色最外面 */
+    background: linear-gradient(to right, rgb(11, 24, 197), rgb(171, 6, 186));
+}
+
+span {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    border-radius: 50%;
+    /* 径向渐变 */
+    background: radial-gradient(circle at 72% 28%, #1b10b6 3px, #3377ae 8%, #5b5b5b, #aad7f9 100%);
+    /* 泡泡内阴影 */
+    box-shadow: inset 0 0 6px #fff,
+        inset 3px 0 6px #eaf5fc,
+        inset 2px -2px 10px #efcde6,
+        inset 0 0 60px #f9f6de,
+        0 0 20px #fff;
+    /* 动画 */
+    animation: myMove 4s linear infinite;
+}
+
+
+@keyframes myMove {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(10%, -1000%);
+    }
+
+    75% {
+        transform: translate(-20%, -1200%);
+    }
+
+    99% {
+        opacity: .9;
+    }
+
+    100% {
+        transform: translateY(-1800%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* 最外层的大盒子 */
+.box {
+    width: 1050px;
+    height: 600px;
+    display: flex;
+    /* 相对定位 */
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    /* 设置圆角 */
+    border-radius: 8px;
+    /* 设置边框 */
+    border: 1px solid rgba(106, 9, 142, 0.6);
+    /* 设置盒子阴影 */
+    box-shadow: 2px 1px 19px rgba(239, 3, 3, 0.1);
+}
+
+
+
+/* 登录和注册盒子 */
+.login-form,
+.register-form {
+    flex: 1;
+    height: 100%;
+}
+
+/* 标题盒子 */
+.title-box {
+    height: 300px;
+    line-height: 500px;
+
+}
+
+/* 标题 */
+.title-box h1 {
+    text-align: center;
+    color: white;
+    /* 禁止选中 */
+    user-select: none;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, .1);
+
+}
+
+/* 输入框盒子 */
+.input-box {
+    display: flex;
+    /* 纵向布局 */
+    flex-direction: column;
+    /* 水平居中 */
+    align-items: center;
+}
+
+/* 输入框 */
+input {
+    width: 60%;
+    height: 40px;
+    margin-bottom: 20px;
+    text-indent: 10px;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 120px;
+    /* 增加磨砂质感 */
+    backdrop-filter: blur(10px);
+}
+
+input:focus {
+    /* 光标颜色 */
+    color: #b0cfe9;
+
+}
+
+/* 聚焦时隐藏文字 */
+input:focus::placeholder {
+    opacity: 0;
+}
+
+/* 按钮盒子 */
+.btn-box {
+    display: flex;
+    justify-content: center;
+}
+
+/* 按钮 */
+button {
+    width: 100px;
+    height: 30px;
+    margin: 0 7px;
+    line-height: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #69b3f0;
+    color: white;
+}
+
+/* 按钮悬停时 */
+button:hover {
+    /* 鼠标小手 */
+    cursor: pointer;
+    /* 透明度 */
+    opacity: .8;
+}
+
+/* 按钮文字 */
+.btn-box p {
+    height: 10px;
+    line-height: 10px;
+    /* 禁止选中 */
+    user-select: none;
+    font-size: 5px;
+    color: white;
+
+}
+
+.btn-box2 p {
+    height: 30px;
+    line-height: 20px;
+    /* 禁止选中 */
+    user-select: none;
+    flex-direction: column;
+    font-size: 14px;
+    color: white;
+}
+
+.btn-box p:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}

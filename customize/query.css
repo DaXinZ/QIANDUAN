@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 新增的隐藏类 */
+.hidden {
+  display: none;
+}
+
+/* 新增的用于展示用户数据的类 */
+.user-data {
+  margin-top: 20px; /* 与上面内容保持一定间距 */
+  /* 根据需要添加其他样式 */
+}
+

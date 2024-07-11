@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+.gradient-button {
+    background-image: linear-gradient(to right, #00bfff, #8034f3); /* 从左到右的渐变：蓝色到紫色 */
+    color: white; /* 白色文字 */
+    padding: 10px 20px; /* 内边距 */
+    border: none; /* 无边框 */
+    border-radius: 5px; /* 圆角边框 */
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+    font-size: 16px; /* 字体大小 */
+    margin: 5px; /* 外边距 */
+    text-decoration: none; /* 去除文本下划线，如果按钮内有链接的话 */
+    display: inline-block; /* 确保元素是行内块元素 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+    outline: none; /* 点击时不显示轮廓 */
+  }
+
+  /* 鼠标悬停时的样式 */
+.gradient-button:hover {
+    background-image: linear-gradient(to right, #0097fc, #6a0df3); /* 鼠标悬停时的渐变色，颜色加深 */
+  }
+  
+  /* 点击时的样式 */
+  .gradient-button:active {
+    background-image: linear-gradient(to right, #00719f, #5e08a2); /* 点击时的渐变色，颜色更深 */
+  }
+  
+  /* 聚焦时的样式 */
+  .gradient-button:focus {
+    box-shadow: 0 0 0 2px #399839; /* 添加一个绿色的阴影 */
+  }
