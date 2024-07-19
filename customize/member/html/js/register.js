@@ -15,7 +15,7 @@ document.getElementById('queryButton').addEventListener('click', function(event)
     }
 
     // 发送POST请求到后端注册接口
-    fetch('http://localhost:8088/Users/regist', {
+    fetch('http://localhost:8088/Users/regist.json', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

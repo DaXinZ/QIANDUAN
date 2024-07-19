@@ -41,7 +41,7 @@
            
             <div class="btn-box">
                
-                <button  id="queryButton"  type="click"  class="btn-animate btn-animate__rotate2-out">注册</button>
+                <button  id="queryButton"  type="click"  class="register-btn">注册</button>
                 <!-- 绑定点击事件 -->
                 <div  class="btn-box2">
                     <p onclick="mySwitch()">已有账号?去登录</p>
@@ -59,23 +59,24 @@
             </div>
             <!-- 输入框盒子 -->
             <div class="input-box">
-                <input type="text" placeholder="用户名">
-                <input type="password" placeholder="密码">
+                <input type="text" placeholder="用户名" class="input-nickName" id="name">
+                <input type="password" placeholder="密码" class="input-password" id="password">
             </div>
             <!-- 按钮盒子 -->
             <div class="btn-box">
-                <button  class="btn-animate__rotate2-out">登录</button>
+                <button  id="enter"  type="click"  class="register-btn">登录</button>
                 <!-- 绑定点击事件 -->
                 <div  class="btn-box2">
                     <p onclick="mySwitch()">没有账号?去注册</p>
                     <p  onclick="window.location.href='./query.html';">查询用户</p>
                 </div>
             </div>
-             <!-- 查询盒子 -->
-     
        </div>
 
+       
+       <script src="./js/login.js"></script>
        <script src="./js/register.js"></script>
+      
        <script>
             // 滑动的状态
              let flag=true
@@ -128,4 +129,5 @@
 
         
     </body>
+    
 </html>

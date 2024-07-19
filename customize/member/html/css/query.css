@@ -1,3 +1,44 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    /* 使用flex布局，确保body容器中的内容居中 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 100vh; /* 确保body占满整个视口高度 */
+    overflow-x: hidden;
+    /* 背景渐变色 */
+    background: linear-gradient(to right, rgb(11, 24, 197), rgb(171, 6, 186));
+}
+
+.box {
+    width: 300px;
+    height: 700px;
+    display: flex;
+    /* 相对定位 */
+    position: relative;
+    z-index: 2;
+    margin: 300px;
+    /* 设置圆角 */
+    border-radius: 8px;
+    /* 设置边框 */
+    border: 1px solid rgba(106, 9, 142, 0.6);
+    /* 设置盒子阴影 */
+    box-shadow: 2px 1px 19px rgba(239, 3, 3, 0.1);
+}
+.user-profile {
+    width: 200%; /* 根据需要调整宽度，这里设置为视口宽度的90% */
+    max-width: 600px; /* 最大宽度限制，防止在大屏幕上过宽 */
+    margin: auto; /* 在水平方向自动调整左右边距，实现居中 */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    text-align: left; /* 确保文本靠左对齐 */
+}
+
 * {
     /* 去除浏览器默认内外边距 */
     margin: 0;
@@ -5,23 +46,43 @@
     box-sizing: border-box;
 }
 
-/* 去除input的轮廓 */
-input {
-    outline: none;
+
+/* 其他样式根据需要添加 */
+
+.profile-avatar {
+    margin-bottom: 20px; /* 头像和信息列表之间的间距 */
+    width: 200px; /* 根据需要调整头像大小 */
+    height: 200px; /* 保持圆形，高度应与宽度一致 */
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-html,
-body {
-    height: 100%;
+.profile-avatar img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
-body {
-    /* 溢出隐藏 */
-    overflow-x: hidden;
-    display: flex;
-    /* 渐变方向从左到右 */
-   /* 这个是外层的代码颜色最外面 */
-    background: linear-gradient(to right, rgb(11, 24, 197), rgb(171, 6, 186));
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* 确保列表宽度充满模块 */
+    text-align: left; /* 文本靠左对齐 */
+}
+
+.info-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-list li strong {
+    color: #333;
+    font-size: 1.2em; /* 增大强调文本的字号 */
 }
 
 span {
@@ -64,133 +125,4 @@ span {
         transform: translateY(-1800%) scale(1.5);
         opacity: 0;
     }
-}
-
-/* 最外层的大盒子 */
-.box {
-    width: 1050px;
-    height: 600px;
-    display: flex;
-    /* 相对定位 */
-    position: relative;
-    z-index: 2;
-    margin: auto;
-    /* 设置圆角 */
-    border-radius: 8px;
-    /* 设置边框 */
-    border: 1px solid rgba(106, 9, 142, 0.6);
-    /* 设置盒子阴影 */
-    box-shadow: 2px 1px 19px rgba(239, 3, 3, 0.1);
-}
-
-
-
-/* 登录和注册盒子 */
-.login-form,
-.register-form {
-    flex: 1;
-    height: 100%;
-}
-
-/* 标题盒子 */
-.title-box {
-    height: 300px;
-    line-height: 500px;
-
-}
-
-/* 标题 */
-.title-box h1 {
-    text-align: center;
-    color: white;
-    /* 禁止选中 */
-    user-select: none;
-    letter-spacing: 5px;
-    text-shadow: 4px 4px 3px rgba(0, 0, 0, .1);
-
-}
-
-/* 输入框盒子 */
-.input-box {
-    display: flex;
-    /* 纵向布局 */
-    flex-direction: column;
-    /* 水平居中 */
-    align-items: center;
-}
-
-/* 输入框 */
-input {
-    width: 60%;
-    height: 40px;
-    margin-bottom: 20px;
-    text-indent: 10px;
-    border: 1px solid #fff;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 120px;
-    /* 增加磨砂质感 */
-    backdrop-filter: blur(10px);
-}
-
-input:focus {
-    /* 光标颜色 */
-    color: #b0cfe9;
-
-}
-
-/* 聚焦时隐藏文字 */
-input:focus::placeholder {
-    opacity: 0;
-}
-
-/* 按钮盒子 */
-.btn-box {
-    display: flex;
-    justify-content: center;
-}
-
-/* 按钮 */
-button {
-    width: 100px;
-    height: 30px;
-    margin: 0 7px;
-    line-height: 30px;
-    border: none;
-    border-radius: 4px;
-    background-color: #69b3f0;
-    color: white;
-}
-
-/* 按钮悬停时 */
-button:hover {
-    /* 鼠标小手 */
-    cursor: pointer;
-    /* 透明度 */
-    opacity: .8;
-}
-
-/* 按钮文字 */
-.btn-box p {
-    height: 10px;
-    line-height: 10px;
-    /* 禁止选中 */
-    user-select: none;
-    font-size: 5px;
-    color: white;
-
-}
-
-.btn-box2 p {
-    height: 30px;
-    line-height: 20px;
-    /* 禁止选中 */
-    user-select: none;
-    flex-direction: column;
-    font-size: 14px;
-    color: white;
-}
-
-.btn-box p:hover {
-    cursor: pointer;
-    border-bottom: 1px solid white;
 }

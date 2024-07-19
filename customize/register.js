@@ -8,10 +8,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         confirmpassword: document.getElementById('confirmPassword').value
     };
 
-    if (formData.password !== formData.confirmpassword) {
-        alert('密码和确认密码不匹配！');
-        return;
-    }
+
 
     // 发送POST请求到后端
     fetch('http://localhost:8088/Users/regist', {
