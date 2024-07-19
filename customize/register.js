@@ -30,7 +30,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     .then(data => {
         console.log('Success:', data);
         if(data.status === 200 && data.msg === "OK"){ // 假设服务端返回的数据包含一个success字段，表示操作是否成功
-            alert('注册成功！您的id为' + data.id);
+            alert('注册成功！您的id为' + data.data.id);
         } else {
             // 服务端返回了异常数据，但状态码是200
             alert('注册失败：' + data.msg); // 假设服务端返回的数据包含错误信息message字段

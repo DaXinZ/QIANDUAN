@@ -257,3 +257,47 @@ button:hover {
     cursor: pointer;
     border-bottom: 1px solid white;
 }
+
+.btn-animate {
+    position: relative;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #027efb;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .btn-animate__rotate2-out {
+    z-index: 1;
+    background-color: #90cf5b;
+  
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      width: 51%;
+      height: 100%;
+      transform: rotate(0);
+      transition: .35s ease-out;
+      background-color: #027efb;
+    }
+  
+    &::before {
+      left: 0;
+    }
+  
+    &::after {
+      right: 0;
+    }
+  
+    &:hover {
+      &::before, &::after {
+        opacity: 0;
+        transform: rotate(360deg);
+      }
+    }
+  }
